@@ -4,6 +4,7 @@ import { SearchResult } from "./searchResult/SearchResult";
 import { searchFilter } from "../../utils/utilityFunctions";
 import axios from "axios";
 import { useKeyPress } from "../../utils/utilityFunctions";
+import { data } from "../../data/data";
 
 export const Search = () => {
   const [userData, setUserData] = useState([]);
@@ -70,14 +71,16 @@ export const Search = () => {
   });
 
   useEffect(() => {
-    (async () => {
-      let response = await axios.get(
-        "http://www.mocky.io/v2/5ba8efb23100007200c2750c"
-      );
-      if (response.status === 200) {
-        setUserData(response.data);
-      }
-    })();
+    // (async () => {
+    //   let response = await axios.get(
+    //     "http://www.mocky.io/v2/5ba8efb23100007200c2750c"
+    //   );
+    //   if (response.status === 200) {
+    //     setUserData(response.data);
+    //   }
+    // })();
+
+    setUserData(data);
   }, []);
 
   return (
