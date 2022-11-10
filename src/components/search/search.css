@@ -1,6 +1,6 @@
 /* Search bar */
 .searchbar-container{
-    margin: 5rem;
+    margin: 5rem 1rem;
     width: 25rem;
     position: relative;
 }
@@ -117,3 +117,10 @@
 .btn{
     margin-top: 50vh;
 } */
+
+@media screen and (max-width:500px) {
+    .searchbar-container {
+        margin: 3rem 0rem;
+        width: 15rem;
+    }
+}
